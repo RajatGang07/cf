@@ -1,0 +1,2 @@
+export const STORE_PAGE_NUMBER = "STORE_PAGE_NUMBER";
+export const ITEMS_PER_PAGE = "ITEMS_PER_PAGE";

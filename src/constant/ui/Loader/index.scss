@@ -1,0 +1,199 @@
+.card{
+    position:relative;
+    box-shadow:0 6px 12px rgba(219,233,245,0.8), 0 3px 3px rgba(219,233,245,1);
+    background-color: #FFF;
+    border-radius:6px;
+    height:150px; 
+    overflow:hidden;
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+  
+  .animatedBG{
+    -webkit-animation-duration: 2.2s;
+    animation-duration: 2.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background: #E5F0FB;
+    background: -webkit-linear-gradient(to right, #E5F0FB 4%, #DCE9F6 25%, #E5F0FB 36%);
+    background: linear-gradient(to right, #E5F0FB 4%, #DCE9F6 25%, #E5F0FB 36%);
+    -webkit-background-size: 1200px 100%;
+    background-size: 1200px 100%;
+  }
+  
+  /* Animation of Shimmer Background */
+  @-webkit-keyframes shimmer {
+        0% {
+          background-position: -100% 0
+        }
+        100% {
+          background-position: 100% 0
+        }
+  }
+      
+  @keyframes shimmer {
+      0% {
+        background-position: -1200px 0
+      }
+      100% {
+        background-position: 1200px 0
+      }
+  }
+  
+  .mask{
+    position:absolute;
+    background-color: #FFFFFF;
+  }
+  
+  .topMask{
+    top:0;
+    left:14px;
+    height:32px;
+    width:100%;
+  }
+  
+  .bottomMask{
+    bottom:0;
+    left:14px;
+    height:32px;
+    width:100%;
+  }
+  
+  .leftMask{
+    left:14px;
+    width:50px;
+    height:100%;
+  }
+  
+  .rightMask{
+    right:0;
+    width:80px;
+    height:100%;
+  }
+  
+  .horizontalLineMask1{
+    left:14px;
+    top:59px;
+    height:4px;
+    width:100%;
+  }
+  
+  .horizontalLineMask2{
+    left:14px;
+    top:89px;
+    height:4px;
+    width:100%;
+  }
+  
+  .verticalGapMask{
+    height:100%;
+    width:80px;
+    top:0;
+    left:180px;
+  }
+  
+  .leftBlock2PaddingMask{
+    width:20px;
+    height:27px;
+    top:62px;
+    left:165px;
+  }
+  
+  .leftBlock3PaddingMask{
+    width:60px;
+    height:27px;
+    top:92px;
+    left:125px;
+  }
+  
+  .rightBlock1PaddingMask{
+    width:24px;
+    height:29px;
+    top:31px;
+    right:79px;
+  }
+  
+  .rightBlock3PaddingMask{
+    width:120px;
+    height:29px;
+    top:91px;
+    right:79px;
+  }
+  
+  /* For demo purposes color the masks */
+  .demo .topMask{
+    background-color:#18FFFF;
+  }
+  
+  .demo .bottomMask{
+    background-color:#64FFDA;
+  }
+  
+  .demo .leftMask{
+    background-color:#CDDC39;
+  }
+  
+  .demo .rightMask{
+    background-color:hotpink;
+  }
+  
+  .demo .horizontalLineMask1{
+    background-color:pink;
+  }
+  
+  .demo .horizontalLineMask2{
+    background-color:teal;
+  }
+  
+  .demo .verticalGapMask{
+    background-color:orange;
+  }
+  
+  .demo .leftBlock2PaddingMask{
+    background-color:blue;
+  }
+  
+  .demo .leftBlock3PaddingMask{
+    background-color:purple;
+  }
+  
+  .demo .rightBlock1PaddingMask{
+    background-color:green;
+  }
+  
+  .demo .rightBlock3PaddingMask{
+    background-color:red;
+  }
+  
+  /*Not part of the tutorial, just here to style the tutorial itself */
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  
+  body{
+    background-color:#F5F5F5;
+  }
+  
+  .text{
+    font-size:1.3rem;
+    text-align:left;
+    font-family: 'Roboto';
+  }
+  
+  h1{
+    display:inline;
+    font-weight:bold;
+    font-size:1.5rem;
+    margin-right:10px;
+    font-family: 'Roboto';
+  }
+  
+  .content{
+    width:90%;
+    max-width:1100px;
+    margin: 80px auto;
+  }

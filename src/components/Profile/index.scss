@@ -1,0 +1,111 @@
+.container-parent {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+
+    .container {
+        text-align: center;
+        margin: -8px;
+        font-family: 'Roboto', sans-serif;
+        height: auto;
+    }
+
+    .container-head {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 130px;
+        padding-bottom: 80px;
+        padding-left: 10px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(12, 12, 29, 0.6306897759103641) 38%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    .menu {
+        margin-top: -130px;
+        text-align: left;
+        color: white;
+        line-height: 8px;
+        cursor: pointer;
+
+        p {
+            padding: 0px;
+
+        }
+
+    }
+
+    .profile-picture {
+        img {
+            border-radius: 100%;
+            margin-top: -60px;
+            border: solid;
+            border-width: 4px;
+            border-color: white;
+        }
+    }
+
+    .container-body {
+        padding-left: 20px;
+    }
+
+    .name {
+        text-transform: uppercase;
+    }
+
+    .location {
+        color: gray;
+    }
+
+    .bio {
+        p {
+            padding: 10px;
+        }
+    }
+
+    .stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: gray;
+            font-size: 12px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+    }
+
+    .followers {
+        padding-right: 60px;
+    }
+
+
+    .following {
+        padding-right: 60px;
+    }
+
+    .topics {
+        padding-right: 60px;
+    }
+
+    @media (min-width: 600px) {
+
+        .container {
+            width: 60%;
+            border-radius: 2px;
+            position: absolute;
+            margin: 0px 0px 30px 250px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                0 12.5px 10px rgba(0, 0, 0, 0.035),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                0 100px 80px rgba(0, 0, 0, 0.07);
+        }
+
+        .container-head {
+            border-radius: 2px;
+        }
+    }
+
+}

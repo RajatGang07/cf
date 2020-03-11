@@ -1,0 +1,76 @@
+{
+  "name": "cf",
+  "version": "1.0.0",
+  "description": "CF",
+  "main": "index.js",
+  "repository": "https://github.com/user/repository.git",
+  "author": "rajatgang07@gmail.com  ",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config=config/webpack.dev.js --hot",
+    "start:reload": "webpack-dev-server --config=config/webpack.dev.js",
+    "start:style": "cross-env MAP_STYLE=true webpack-dev-server --config=config/webpack.dev.js --hot",
+    "build": "webpack --config=config/webpack.prod.js",
+    "analyze": "cross-env ENABLE_ANALYZER=true yarn build",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "check-prop-types": "^1.1.2",
+    "connected-react-router": "^6.7.0",
+    "history": "^4.10.1",
+    "identity-obj-proxy": "^3.0.0",
+    "loader": "^2.1.1",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.88.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^25.1.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "react-test-renderer": "^16.4.1",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.0",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-manifest-plugin": "^2.0.3",
+    "webpack-merge": "^4.1.3"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/config/setupTests.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$": "<rootDir>/src/utils/empty-module.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  }
+}
