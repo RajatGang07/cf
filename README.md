@@ -38,7 +38,7 @@ npm test
 It´s possible to generate the code coverage of code. Jest will generate a HTML file with all information from your tests. To do this run the command:
 
 ```CLI
-yarn test:coverage
+npm test:coverage
 ```
 
 ### Production build
