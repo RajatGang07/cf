@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { Pagination } from 'semantic-ui-react'
 import { formatAddress } from '../../utils/formatAddress';
 import { numberOption } from '../ui/DropDown/numberOption';
+import { formatCompany } from '../../utils/formatCompany';
 
 
 const UserTable = ({user,page,itemsPerPage,setPageNumber,setItemsPerPage,userInfo,deleteUser,...props}) => {
@@ -50,6 +51,7 @@ const UserTable = ({user,page,itemsPerPage,setPageNumber,setItemsPerPage,userInf
                         <Table.HeaderCell>Phone</Table.HeaderCell>
                         <Table.HeaderCell>Website</Table.HeaderCell>
                         <Table.HeaderCell>Address</Table.HeaderCell>
+                        <Table.HeaderCell>Company</Table.HeaderCell>
                         <Table.HeaderCell>Info</Table.HeaderCell>
                         <Table.HeaderCell>Delete</Table.HeaderCell>
                     </Table.Row>
@@ -67,6 +69,7 @@ const UserTable = ({user,page,itemsPerPage,setPageNumber,setItemsPerPage,userInf
                                 <Table.Cell>{user.phone}</Table.Cell>
                                 <Table.Cell>{user.website}</Table.Cell>
                                 <Table.Cell>{formatAddress(user.address)}</Table.Cell>
+                                <Table.Cell>{formatCompany(user.company)}</Table.Cell>
                                 <Table.Cell>
                                     <Button
                                         floated='right'

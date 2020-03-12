@@ -1,8 +1,14 @@
-import {successUserInfo, requestUserInfo, errorUserInfo } from "../store/actions/usersAction";
+import { successUserInfo, requestUserInfo, errorUserInfo } from "../store/actions/usersAction";
 import axios from 'axios';
 
 const getUserInfo = (userId) => {
-    return function (dispatch) {
+    return function (dispatch, getState) {
+        console.log(getState, getState())
+        if (getState().user.userDetails) {
+            if (getState().user.userDetails.id === parseInt(userId)) {
+                return dispatch(successUserInfo(getState().user.userDetails));
+            }
+        }
         dispatch(requestUserInfo());
         return axios
             .get('https://jsonplaceholder.typicode.com/users/' + userId).then(res => res)
@@ -11,7 +17,7 @@ const getUserInfo = (userId) => {
                     dispatch(successUserInfo(res.data));
                 }
                 else {
-                   // NotificationManager.error("Something went wrong");
+                    // NotificationManager.error("Something went wrong");
                 }
             }).catch((err) => dispatch(errorUserInfo(err)));
     }
